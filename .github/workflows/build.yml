@@ -534,7 +534,7 @@ jobs:
         name: Add GCC Runtime license
         if: matrix.compiler == 'gcc'
         run: |
-          cp /usr/share/doc/mingw64-${{ steps.vars.outputs.mingw-architecture }}-gcc/COPYING installed/licenses/gcc.txt
+          cp /usr/share/doc/mingw64-${{ steps.vars.outputs.mingw-architecture }}-gcc/COPYING installed/licenses/gcc.txt || ls /usr/share/doc
       -
         name: Extract CLDR
         run: |
